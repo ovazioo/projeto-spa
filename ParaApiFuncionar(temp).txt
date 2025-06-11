@@ -1,0 +1,2 @@
+https://cors-anywhere.herokuapp.com/corsdemo
+Use esse link e clique pra obter demo,ele vai fazer a api funcionar

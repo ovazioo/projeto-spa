@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/imgs/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/login.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hole Mangá - Login/Cadastro</title>
+</head>
+
+<body>
+    <div id="fundo"></div>
+
+    <div class="w-screen h-screen flex justify-center items-center">
+        <div class="wrapper w-full max-w-md relative">
+            <img src="./assets/imgs/logo-white.png" alt="Hole Mangá" class="logo" />
+            <div class="bg-[#45578C] border rounded-2xl card p-8">
+                <h2 id="titulo-form">ENTRAR</h2> <!-- Alterado para um ID que será usado no JS -->
+                <form id="form-login" class="flex flex-col space-y-4">
+                    <div class="flex flex-col space-y-2">
+                        <label for="email" class="label text-white">E-mail ou Nome de Usuário</label>
+                        <!-- Alterado para refletir a funcionalidade -->
+                        <input type="text" id="email" placeholder="exemplo@email.com ou Nome de Usuário"
+                            class="input rounded-lg p-2 border border-#F2D8E4 bg-#F2D8E4" required>
+                        <!-- Alterado para tipo text -->
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="password" class="label text-white">Senha</label>
+                        <input type="password" id="password" placeholder="Senha123"
+                            class="input rounded-lg p-2 border border-#F2D8E4 bg-#F2D8E4" required>
+                    </div>
+                    <div class="flex justify-between mb-4">
+                        <a href="#" class="forgot-password text-white">Esqueci minha senha</a>
+                    </div>
+                    <button type="submit"
+                        class="button bg-white hover:bg-white text-black font-bold py-2 px-4 rounded-lg">ENTRAR</button>
+                    <p class="text-white mt-4">Não tem conta? <a href="#" id="link-cadastro"
+                            class="text-#7284C8">Cadastre-se</a></p>
+                </form>
+
+                <form id="form-cadastro" class="flex flex-col space-y-4 hidden">
+                    <div class="flex flex-col space-y-2">
+                        <label for="username" class="label text-white">Usuário</label>
+                        <input type="text" id="username" placeholder="Seu Nome de Usuário"
+                            class="input rounded-lg p-2 border border-#F2D8E4 bg-#F2D8E4" required>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="email-cadastro" class="label text-white">E-mail</label>
+                        <input type="email" id="email-cadastro" placeholder="exemplo@email.com"
+                            class="input rounded-lg p-2 border border-#F2D8E4 bg-#F2D8E4" required>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="password-cadastro" class="label text-white">Senha</label>
+                        <input type="password" id="password-cadastro" placeholder="Senha123"
+                            class="input rounded-lg p-2 border border-#F2D8E4 bg-#F2D8E4" required>
+                    </div>
+                    <button type="submit"
+                        class="button bg-white hover:bg-white text-black font-bold py-2 px-4 rounded-lg">CADASTRAR</button>
+                    <p class="text-white mt-4">Já tem conta? <a href="#" id="link-login" class="text-#7284C8">Entrar</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/login.js"></script>
+</body>
+
+</html>

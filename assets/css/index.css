@@ -1,0 +1,516 @@
+@import url(./global.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#Header {
+    background-color: #45578C;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#Header a {
+    color: white;
+    font-size: 3.4vh;
+    text-decoration: none;
+}
+
+#ListHead {
+    width: 9vh;
+    height: 9vh;
+
+    color: white;
+}
+
+#ButtonListHead {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-mobile {
+    position: absolute;
+    top: 15vh;
+    left: 0;
+    background-color: #1d2951;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    display: none;
+    /* começa escondido */
+    height: 40vh;
+    border: white solid 2px;
+}
+
+#menu-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.menu-aberto {
+    display: flex !important;
+}
+
+#profileicon {
+    width: 9vh;
+    height: 9vh;
+
+    color: white;
+}
+
+#logo {
+    width: 20vh;
+    height: 20vh;
+
+
+}
+
+#divImg {
+    padding-right: 90px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+#divMainMangas {
+    background-color: #0A1240;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#MangaInHigh {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+#MainCape {
+    height: 30vh;
+    border: solid 2px red;
+}
+
+#MainMangaInformation {
+    background-color: #45578C;
+    border-radius: 10px;
+    border: 2px red solid;
+}
+
+.MainMangaInformation {
+    background-color: #45578C;
+    border-radius: 10px;
+    border: 2px red solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#MainMangaInformation p {
+    font-size: 2.1vh;
+    margin: 50px;
+    color: white;
+
+}
+
+.MainMangaInformation p {
+    font-size: 2.1vh;
+    margin: 50px;
+    color: white;
+}
+
+#recomend {
+    background-color: #45578C;
+    width: 90%;
+    overflow: hidden;
+    /* <- isso é essencial */
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.DivCarrosselForMangas {
+    background-color: #45578C;
+    width: 90%;
+    overflow: hidden;
+    /* <- isso é essencial */
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    height: auto;
+}
+
+.CarrosselImagensManga {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+    /* <- isso evita que as imagens "quebrem" */
+    gap: 10px;
+    /* Adiciona espaçamento real entre imagens */
+    display: flex;
+    overflow: hidden;
+}
+
+.CarroselImgsMangas {
+    width: 16vh;
+    height: 21vh;
+    margin-bottom: 15px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+.CarroselImgsMangas:hover{
+    width: 21vh;
+    height: 26vh;
+
+}
+
+.TopCarrosselForMangas {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+#topCarrossel p {
+    font-size: 1.3vw;
+    color: white;
+
+}
+
+.TopCarrosselForMangas p {
+    font-size: 1.3vw;
+    color: white;
+}
+
+.CarrosselButtonNextAndPrev {
+    background-color: #D9415D;
+    border: none;
+    width: 4vh;
+    height: 3vh;
+}
+
+.DivCarrosselMangasText {
+    width: 100%;
+    padding-left: 2vh;
+}
+
+.PrevandNext {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 15px;
+    padding-top: 15px;
+    gap: 1vh;
+}
+
+#roda {
+    background-color: #45578C;
+    display: flex;
+    justify-content: center;
+}
+
+#roda p {
+    color: white;
+}
+
+/*Animaçao pra troca do modo escuro e claro*/
+#Header,
+#divMainMangas,
+#MainMangaInformation,
+.DivCarrosselForMangas,
+#roda,
+#Header a,
+#TextRecomend,
+#MangaTitle,
+#MangaDescriçao #paidoeoalinhas #eoalinhas {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+#logo {
+    transition: filter 0.4s ease, transform 0.3s ease;
+}
+
+#eoalinhas {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+h4 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    /* deixa o item para a direita e quando está negaticvo vai para a esquerda */
+    /* faz com que não haja um enorme espaço entre os itens da div sinopse */
+}
+
+#mangainfos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    /* padding: 2vh;*/
+    /* deixa o item para a direita e quando está negaticvo vai para a esquerda */
+}
+
+.atributo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#atr {
+    display: flex;
+    flex-direction: column;
+}
+
+h5 {
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+h1 {
+    color: white;
+}
+
+.paidoeoalinhas {
+    display: none;
+    background-color: #0A1240;
+    width: 100%;
+    justify-content: center;
+}
+
+.SunAndMoon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 3vh;
+    height: 5vh;
+}
+
+.moon {
+    background: none;
+    width: 4vh;
+    height: 4vh;
+    display: none;
+    color: black;
+}
+
+.sun {
+    color: white;
+    background: none;
+    width: 4vh;
+    height: 4vh;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+#MangaExibition {
+    background-color: #45578C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#MangaExibition select {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.sinopse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    /*background-color: #45578C;*/
+    border-top: 2px red solid;
+
+    margin-bottom: 2vh;
+}
+
+.sinopse p {
+    margin: 1vh;
+    color: white;
+}
+
+.sinopse h4 {
+    color: white;
+}
+
+.genero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    font-family: "Lemon Milk", sans-serif;
+}
+#paidobuscaManga {
+    background-color: #0A1240;
+}
+.buscaManga {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1d2540;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+    font-family: "Lemon Milk", sans-serif;
+    color: white;
+}
+
+.barra-superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.barra-pesquisa {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.btn-filtro {
+    background-color: #3a4b88;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.grade-mangas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.card-manga {
+    background-color: #2b3663;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-manga h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.card-manga p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.ver-mais {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ver-mais a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.MangaPaginas {
+    width: 70%;
+}
+@media (max-width: 950px) {
+    #Header a {
+        display: none;
+    }
+
+    #MangaInHigh {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        align-items: center;
+    }
+
+    .DivCarrosselForMangas .TopCarrosselForMangas .DivCarrosselMangasText p {
+        font-size: large;
+    }
+
+    .paidoeoalinhas #eoalinhas #MangaInHigh {
+        display: flex;
+        align-items: center;
+    }
+
+    .paidoeoalinhas #eoalinhas #MangaInHigh .MainMangaInformation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .paidoeoalinhas #eoalinhas #MangaInHigh .MainMangaInformation #mangainfos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #ButtonListHead {
+        display: flex;
+    }
+
+    #Header .menu-fechado a {
+        display: flex;
+    }
+
+    #Header .SunAndMoon {
+        display: none;
+    }
+
+    #Header #menu-mobile .SunAndMoon {
+        display: flex;
+    }
+}
