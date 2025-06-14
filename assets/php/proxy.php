@@ -1,27 +1,49 @@
 <?php
-// Recebe a URL da imagem pela query string
-$url = $_GET['url'] ?? null;
+// Permitir CORS
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET");
+header("Access-Control-Allow-Headers: Content-Type");
 
-// Verifica se foi enviada a URL
-if (!$url) {
+// Valida a URL recebida
+if (!isset($_GET['url'])) {
     http_response_code(400);
-    echo 'URL inválida.';
+    echo json_encode(['error' => 'Missing url parameter']);
     exit;
 }
 
-// Faz a requisição da imagem
-$ch = curl_init($url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // Segue redirecionamentos
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // (opcional se tiver erro SSL)
-$response = curl_exec($ch);
+$url = filter_var($_GET['url'], FILTER_VALIDATE_URL);
+if (!$url) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Invalid URL']);
+    exit;
+}
 
-// Verifica o tipo de conteúdo da imagem
+// Inicializa CURL
+$ch = curl_init($url);
+
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+// Header opcional
+curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    'User-Agent: Mozilla/5.0'
+]);
+
+$response = curl_exec($ch);
+$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 $contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
 
 curl_close($ch);
 
-// Retorna a imagem com o tipo certo
-header("Content-Type: $contentType");
+http_response_code($httpcode);
+
+// Define o Content-Type corretamente (JSON ou imagem, se necessário)
+if (strpos($contentType, 'application/json') !== false) {
+    header('Content-Type: application/json; charset=utf-8');
+} else {
+    header("Content-Type: $contentType");
+}
+
+// Retorna o conteúdo original
 echo $response;
 ?>

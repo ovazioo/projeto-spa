@@ -8,6 +8,7 @@
 
 body {
   /* Camada 1: cor com opacidade | Camada 2: imagem de fundo */
+  /*Colocar na div*/
   background-image: linear-gradient(
       rgba(10, 18, 64, 0.75),
       rgba(10, 18, 64, 0.75)

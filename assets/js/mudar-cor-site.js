@@ -26,7 +26,10 @@ function MudarCor() {
   const sun = document.querySelectorAll(".sun");
   const menuMobile = document.getElementById("menu-mobile");
   const mangaexibition = document.getElementById("MangaExibition");
-
+  const divSearch = document.getElementById("divSearch");
+  const divbusca = document.getElementById("divbusca");
+  const libusca = document.querySelectorAll(".results li");
+  
   if (headerCor === "rgb(69, 87, 140)") {
     header.style.backgroundColor = "#9DADFF";
     logo.src = "./assets/imgs/logo-black.png";
@@ -79,6 +82,11 @@ function MudarCor() {
     })
     menuMobile.style.backgroundColor = "#8896DB";
     mangaexibition.style.backgroundColor = "#9DADFF";
+    divSearch.style.backgroundColor = "#3F4B85";
+    divbusca.style.backgroundColor = "#ab8be6";
+    libusca.forEach(el => {
+      el.style.background = "#9DADFF";
+    })
   } else {
     header.style.backgroundColor = "#45578C";
     logo.src = "./assets/imgs/logo-white.png";
@@ -131,5 +139,10 @@ function MudarCor() {
     })
     menuMobile.style.backgroundColor = "#45578C";
     mangaexibition.style.backgroundColor = "#45578C";
+    divSearch.style.backgroundColor = "#0A1240";
+    divbusca.style.backgroundColor = "#45578C";
+    libusca.forEach(el => {
+      el.style.background = "#2b3663";
+    })
   }
 }

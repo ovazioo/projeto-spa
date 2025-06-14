@@ -7,6 +7,7 @@
   <title>Hole Mangá - Home</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./assets/css/index.css">
+  
 </head>
 
 <body>
@@ -32,19 +33,15 @@
             <path
               d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
           </svg>
-        </button>
+        </button>s
 
-        <a href="#" onclick="PaginaHome()">Home</a>
-        <a href="#" onclick="SearchManga()">conteudo2</a>
-        <a href="#">conteudo3</a>
-        <a href="#">conteudo4</a>
+        <a class="menu" href="#" onclick="PaginaHome()">Home</a>
+        <a class="menu" href="#" onclick="SearchManga()">Buscar Mangá</a>
       </div>
       <img src="./assets/imgs/logo-white.png" id="logo" alt="logo">
     </div>
-    <a href="#" onclick="PaginaHome()">Home</a>
-    <a href="#" onclick="SearchManga()">conteudo2</a>
-    <a href="#">conteudo3</a>
-    <a href="#">conteudo4</a>
+    <a class="menu" href="#" onclick="PaginaHome()">Home</a>
+    <a class="menu" href="#" onclick="SearchManga()">Buscar Mangá</a>
     <button onclick="MudarCor()" class="SunAndMoon">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" class="moon" id="moon" height="16" fill="currentColor"
         class="bi bi-moon-fill" viewBox="0 0 16 16">
@@ -57,34 +54,41 @@
           d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
       </svg>
     </button>
+    <a href="login.html"onclick="ShowLogin()">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle"
       viewBox="0 0 16 16" id="profileicon">
       <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
       <path fill-rule="evenodd"
         d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-    </svg>
+    </svg></a>
   </div>
-  <!--Barra de busca-------------------------------------------------------------->
-<!--<div id="paidobuscaManga">AQUI TA UM TESTE DE BUSCA DE MANGA,O ARQUIVO JS È O BuscaManga.js,LA VAI TA DENTRO DO COMENTARIO PRA NAO BUGAR O SITE,EXECUTE NO LARAGON OU XAMPP
-    <div class="buscaManga" id="buscaManga">
-      <div class="barra-superior">
-        <input type="text" class="barra-pesquisa" id="inputBusca" placeholder="Pesquisar (desativado)">
-        <button class="btn-filtro" id="botaoBusca">🔍</button>
-      </div>
-
-      <div class="grade-mangas" id="gradeMangas">
-       
-      </div>
-    </div>-->
+  <!--PÁGINA EM SPA DA ÁREA DE BUSCA DE mangás-->
+ <div id="divSearch">
+  <div class="container" id="divbusca">
+    <h1>Buscar Mangás</h1>
+    <div class="filters"> 
+      <input type="text" id="search-name" placeholder="Nome do mangá..." />
+      <select id="genre-dropdown">
+        <option value="">Todos os Gêneros</option>
+      </select>
+      <select id="year-dropdown">
+        <option value="">Todos os Anos</option>
+      </select>
+      <button id="btn-search">Pesquisar</button>
+    </div>
+    <ul id="results" class="results"></ul>
+    
   </div>
+ </div>
+ <!--Parte do manga que esta em destaque----------------------->
   <div id="divMainMangas">
     <div id="MangaInHigh"><a href="#" onclick="ShowMangaOnePunch()"><img src="./assets/imgs/carrossel/OnePunchCape.png"
           id="MainCape" alt=""></a>
       <div id="MainMangaInformation" class="MainMangaInformation">
-        <p id="MangaTitle">One Punch man</p>
+        <h1 id="MangaTitle">One Punch man</h1>
 
-        <p id="MangaDescriçao">"One-Punch Man" conta a história de Saitama, um super-herói que se tornou tão poderoso
-          <br>que consegue derrotar qualquer inimigo com um único soco. <br>No entanto, a sua força extrema causa-lhe
+        <p id="MangaDescricao">"One-Punch Man" conta a história de Saitama, um super-herói que se tornou tão poderoso
+      que consegue derrotar qualquer inimigo com um único soco.No entanto, a sua força extrema causa-lhe
           grande tédio, pois nenhum desafio é suficiente para o manter interessado em ser um herói
         </p>
       </div>
@@ -161,10 +165,10 @@
         <img src="./assets/imgs/carrossel/frieren.png" alt="" class="CarroselImgsMangas">
         <img src="./assets/imgs/carrossel/fireforce.png" alt="" class="CarroselImgsMangas">
         <img src="./assets/imgs/carrossel/naruto.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/bluelock.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/frieren.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/fireforce.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/naruto.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/onepiece.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/kagura.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/boruto.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/jjk.png" alt="" class="CarroselImgsMangas">
 
       </div>
     </div>
@@ -193,14 +197,14 @@
         </div>
       </div><!--Carrossel de manga-->
       <div id="isekaiManga" class="CarrosselImagensManga">
-        <img src="./assets/imgs/carrossel/bluelock.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/frieren.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/fireforce.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/naruto.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/bluelock.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/frieren.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/fireforce.png" alt="" class="CarroselImgsMangas">
-        <img src="./assets/imgs/carrossel/naruto.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/konosuba.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/sao.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/overlord.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/rezero.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/slime.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/mushoku.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/tbr.png" alt="" class="CarroselImgsMangas">
+        <img src="./assets/imgs/carrossel/inuyasha.png" alt="" class="CarroselImgsMangas">
 
       </div>
     </div>
@@ -212,7 +216,6 @@
       <div id="MangaInHigh">
 
         <div id="MainMangaInformation" class="MainMangaInformation">
-          <!-- Título do mangá -->
           <div class="MainMangaInformationImg">
             <img src="./assets/imgs/carrossel/OnePunchCape.png" id="MainCape" alt="">
           </div>
@@ -478,8 +481,13 @@
     </div> <!-- final do #eoalinhas -->
   </div><!--final do #paidoeoalinhas-->
   <footer id="roda">
-    <p>Desenvolvido por joão vinicius,joao vitor,matheus gabriel e david kevin</p>
-  </footer>
+  <div class="footer-container">
+ <p>Seu portal de descobertas e aventuras no mundo dos mangás.</p>
+
+    <p class="footer-copy">&copy; 2025 Hole Mangá. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
   <script src="./assets/js/testspa.js"></script>
   <script src="./assets/js/mudar-cor-site.js"></script>
   <script src="./assets/js/carrossel.js"></script>
@@ -487,6 +495,7 @@
   <script src="./assets/js/exibiçaoManga.js"></script>
   <script src="./assets/js/MangaStatus.js"></script>
   <script src="./assets/js/BuscaManga.js"></script>
+  <script src="./assets/js/search.js"></script>
   <script>
     //AQUI TA CHAMANDO ALGUNS DOS SCRIPT,ALGUNS ESTAO CHAMANDO NO PROPRIO ARQUIVO,NAO PRECISA COLCAR AQUI E NO FINAL DO SCRIPT PQ SE NAO ELE VAI SER EXECUTADO DUAS VEZES
     CarrosselMangaRecomend();

@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setLoggedUser({ username: user.username, email: user.email });
       alert("Login bem-sucedido!");
       // Aqui você pode adicionar a lógica para redirecionar para a área logada ou dashboard
-      // Por exemplo: window.location.href = "dashboard.html";
+      window.location.href = "index.html";
     } else {
       const errorMessage = document.createElement("p");
       errorMessage.className = "error-message text-red-500 mt-2";

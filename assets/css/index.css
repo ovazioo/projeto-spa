@@ -9,7 +9,7 @@
 body {
     display: flex;
     flex-direction: column;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #Header {
@@ -55,7 +55,7 @@ body {
     padding: 20px;
     display: none;
     /* começa escondido */
-    height: 40vh;
+    height: 100%;
     border: white solid 2px;
 }
 
@@ -132,7 +132,7 @@ body {
 }
 
 #MainMangaInformation p {
-    font-size: 2.1vh;
+    font-size: 2.7vh;
     margin: 50px;
     color: white;
 
@@ -377,16 +377,12 @@ select {
     align-items: center;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-    font-family: "Lemon Milk", sans-serif;
+h1, .menu {
+    font-family: 'Lemon Milk';
+    font-weight: 600;
 }
+
+
 #paidobuscaManga {
     background-color: #0A1240;
 }
@@ -465,9 +461,118 @@ a {
 .MangaPaginas {
     width: 70%;
 }
+#divSearch {
+    display: none;
+    width: 100%;
+    background-color: #0A1240;
+    height: 100%;
+    padding-top: 35px;
+}
+#divbusca {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  flex-direction: column;
+  background-color: #45578C;
+}
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.filters button {
+  background: #7284c8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filters button:hover {
+  background: #4c5573;
+}
+
+.results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.results li {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  background: #2b3663;
+  border-radius: 10px;
+}
+
+.results img {
+  width: 100px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-info {
+  flex: 1;
+}
+
+.result-info h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.result-info p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.synopsis.hidden {
+  display: none;
+}
+
+.manga-card {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.manga-card:hover {
+  background-color: #ab8be6;
+}
+
 @media (max-width: 950px) {
     #Header a {
         display: none;
+    }
+    #Header a #profileicon{
+        display: flex;
     }
 
     #MangaInHigh {
@@ -514,3 +619,4 @@ a {
         display: flex;
     }
 }
+

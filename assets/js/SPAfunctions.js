@@ -7,7 +7,7 @@ function PaginaHome() {
     const showmangaNaruto = document.getElementById('DivMangaNaruto');
     const showmangaHXH = document.getElementById('DivMangaHXH');
     const showmangaKimetsu = document.getElementById('DivMangaKimetsu');
-    const SearchManga = document.getElementById('buscaManga');
+    const SearchManga = document.getElementById('divSearch');
 
     if(DivMainMangasShow === "none"){
         DivMainMangas.style.display = "flex";
@@ -77,7 +77,7 @@ function SearchManga(){
 
     const DivMainMangas = document.getElementById("divMainMangas");
     const DivMainMangasShow = window.getComputedStyle(DivMainMangas).display;
-    const SearchManga = document.getElementById('buscaManga');
+    const SearchManga = document.getElementById('divSearch');
 
     if(DivMainMangasShow === "flex"){
         DivMainMangas.style.display = "none";

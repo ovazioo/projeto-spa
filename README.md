@@ -54,21 +54,6 @@ git clone https://github.com/ovazioo/projeto-spa.git
 
 ---
 
-## 📄 Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
-## 📞 Contato
-
-Se quiser contribuir ou tirar dúvidas, entre em contato:
-
-- Email: ovaziox@gmail.com
-- GitHub: [ovazioo](https://github.com/ovazioo)
-
----
-
 <div align="center">
   <sub>Desenvolvido com ❤️ por ovazioo, trafalgar, matheus e david</sub>
 </div>
